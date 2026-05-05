@@ -24,8 +24,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
+      # Não usamos actions/configure-pages aqui: ele chama a API GET /pages e
+      # falha com 404 até o Pages estar habilitado no repositório. Para HTML
+      # estático puro, upload + deploy bastam. Ative uma vez em:
+      # Repo → Settings → Pages → Build: GitHub Actions
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

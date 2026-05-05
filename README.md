@@ -141,20 +141,38 @@ Dica: use [squoosh.app](https://squoosh.app) para gerar WebP otimizado.
 
 ## 4. Deploy
 
-### Opção 1 — Netlify (recomendado, drag-and-drop)
+### Opção 1 — GitHub Pages (este repositório)
+
+O workflow em `.github/workflows/deploy.yml` publica automaticamente em cada
+push na branch `main`.
+
+**Antes do primeiro deploy funcionar**, habilite o Pages uma vez:
+
+1. Abra **Settings** → **Pages** no repositório.
+2. Em **Build and deployment** → **Source**, escolha **GitHub Actions** (não
+   “Deploy from a branch”).
+3. Faça um novo push ou rode o workflow manualmente em **Actions**.
+
+URL típica: `https://SEU-USUARIO.github.io/NOME-DO-REPO/`
+
+Se você vir erro na action `configure-pages`: este projeto **não usa** mais
+esse passo — HTML estático só precisa de `upload-pages-artifact` +
+`deploy-pages`.
+
+### Opção 2 — Netlify (drag-and-drop)
 
 1. Acesse [app.netlify.com/drop](https://app.netlify.com/drop)
 2. Arraste a pasta inteira `landing page/`
 3. Pronto. URL pública gerada em segundos.
 
-### Opção 2 — Vercel
+### Opção 3 — Vercel
 
 ```bash
 npm i -g vercel
 vercel deploy --prod
 ```
 
-### Opção 3 — Hospedagem tradicional (FTP)
+### Opção 4 — Hospedagem tradicional (FTP)
 
 Suba todos os arquivos para o `public_html/`. Funciona em qualquer servidor
 estático (Apache, Nginx, etc.) — não precisa de Node.js, PHP ou banco.
