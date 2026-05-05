@@ -1,0 +1,965 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0A1628" />
+    <meta name="color-scheme" content="dark" />
+
+    <title>Virada Extraordinária — Imersão para Líderes em Gramado | 5 Horas que Mudam Ciclos</title>
+    <meta
+      name="description"
+      content="Imersão presencial para empresários, CEOs e Pastores no limite do esgotamento. Gramado, RS. Silencie o ruído mental e retome o governo da sua vida."
+    />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://viradaextraordinaria.com.br/" />
+
+    <meta property="og:type" content="event" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Virada Extraordinária" />
+    <meta property="og:title" content="Virada Extraordinária — Silencie o Ruído Mental" />
+    <meta
+      property="og:description"
+      content="5 horas de imersão que devolvem clareza, presença e direção para líderes que alcançaram o sucesso mas perderam o governo de si mesmos."
+    />
+    <meta property="og:url" content="https://viradaextraordinaria.com.br/" />
+    <meta property="og:image" content="assets/images/ruido.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Virada Extraordinária — Silencie o Ruído Mental" />
+    <meta
+      name="twitter:description"
+      content="5 horas de imersão em Gramado/RS. Para líderes que alcançaram o sucesso mas perderam o governo de si mesmos."
+    />
+    <meta name="twitter:image" content="assets/images/ruido.jpg" />
+
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link
+      rel="preload"
+      as="image"
+      href="assets/images/ruido.jpg"
+      fetchpriority="high"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap"
+    />
+
+    <style>
+      /* Critical CSS — render do hero acima da dobra sem FOUC */
+      :root {
+        --bg-deep: #060b14;
+        --bg-primary: #0a1628;
+        --bg-secondary: #1a3a6b;
+        --accent-cool: #00a8ff;
+        --accent-warm: #d4a843;
+        --text-primary: #ffffff;
+        --text-muted: #c8c8c8;
+        --font-display: "Playfair Display", Georgia, serif;
+        --font-body: "Inter", system-ui, sans-serif;
+        --font-ui: "Montserrat", system-ui, sans-serif;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: var(--bg-primary);
+        color: var(--text-primary);
+        font-family: var(--font-body);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      body.no-scroll {
+        overflow: hidden;
+      }
+      .hero {
+        position: relative;
+        min-height: 100svh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        isolation: isolate;
+      }
+      .hero__bg {
+        position: absolute;
+        inset: 0;
+        z-index: -2;
+      }
+      .hero__bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+      .hero__overlay {
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background:
+          radial-gradient(ellipse at 50% 40%, rgba(10, 22, 40, 0.55), rgba(6, 11, 20, 0.92) 75%),
+          linear-gradient(to bottom, rgba(6, 11, 20, 0.7) 0%, rgba(10, 22, 40, 0.85) 100%);
+      }
+      .hero__inner {
+        text-align: center;
+        padding: 6rem 1.25rem 4rem;
+        max-width: 1100px;
+      }
+      .hero-h1 {
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: clamp(2.25rem, 6.4vw, 4.5rem);
+        line-height: 1.05;
+        letter-spacing: -0.02em;
+        margin: 0 0 1.5rem;
+      }
+      .skip-link {
+        position: absolute;
+        left: -9999px;
+        top: 0;
+        background: var(--accent-warm);
+        color: #000;
+        padding: 0.75rem 1rem;
+        z-index: 9999;
+      }
+      .skip-link:focus {
+        left: 1rem;
+        top: 1rem;
+      }
+    </style>
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/sections.css" />
+    <link rel="stylesheet" href="css/animations.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "Virada Extraordinária",
+        "description": "Imersão presencial de 5 horas para empresários, CEOs e Pastores. Em Gramado, RS, no Recreio Gramadense, com jantar de gala.",
+        "startDate": "2026-06-26T18:00:00-03:00",
+        "endDate": "2026-06-26T22:30:00-03:00",
+        "eventStatus": "https://schema.org/EventScheduled",
+        "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+        "location": {
+          "@type": "Place",
+          "name": "Sociedade Recreio Gramadense",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Rua Garibaldi, 328 - Centro",
+            "addressLocality": "Gramado",
+            "addressRegion": "RS",
+            "addressCountry": "BR"
+          }
+        },
+        "image": ["assets/images/ruido.jpg"],
+        "performer": [
+          { "@type": "Person", "name": "Iran Mariano" },
+          { "@type": "Person", "name": "Gledison Maestro" }
+        ],
+        "organizer": {
+          "@type": "Organization",
+          "name": "Virada Extraordinária",
+          "url": "https://viradaextraordinaria.com.br/"
+        },
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Ingresso Individual",
+            "price": "297.00",
+            "priceCurrency": "BRL",
+            "availability": "https://schema.org/InStock",
+            "url": "https://payfast.greenn.com.br/pre-checkout/bn4k2gq"
+          },
+          {
+            "@type": "Offer",
+            "name": "Diamond Individual",
+            "price": "397.00",
+            "priceCurrency": "BRL",
+            "availability": "https://schema.org/InStock",
+            "url": "https://payfast.greenn.com.br/pre-checkout/bn4k2gq"
+          },
+          {
+            "@type": "Offer",
+            "name": "Experience Duplo",
+            "price": "497.00",
+            "priceCurrency": "BRL",
+            "availability": "https://schema.org/InStock",
+            "url": "https://payfast.greenn.com.br/pre-checkout/bn4k2gq"
+          },
+          {
+            "@type": "Offer",
+            "name": "Diamond Duplo",
+            "price": "597.00",
+            "priceCurrency": "BRL",
+            "availability": "https://schema.org/InStock",
+            "url": "https://payfast.greenn.com.br/pre-checkout/bn4k2gq"
+          }
+        ]
+      }
+    </script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+    <!-- Barra de progresso de leitura -->
+    <div class="reading-progress" aria-hidden="true">
+      <div class="reading-progress__bar" id="readingProgressBar"></div>
+    </div>
+
+    <!-- Sticky CTA bar -->
+    <aside class="sticky-cta" id="stickyCta" role="complementary" aria-label="Ingressos com vagas restantes">
+      <div class="sticky-cta__inner">
+        <span class="sticky-cta__text">
+          <span class="sticky-cta__pulse" aria-hidden="true"></span>
+          Apenas <strong class="slots-count" data-slots>47</strong> vagas restantes
+        </span>
+        <a class="btn btn--primary btn--sm cta-main" href="#ingressos" data-cta="sticky">
+          Garantir meu ingresso
+        </a>
+      </div>
+    </aside>
+
+    <main id="main">
+      <!-- ==================== SEÇÃO 1 — HERO ==================== -->
+      <section class="hero" id="hero">
+        <div class="hero__bg" aria-hidden="true">
+          <img
+            src="assets/images/ruido.jpg"
+            alt=""
+            loading="eager"
+            decoding="async"
+            fetchpriority="high"
+          />
+        </div>
+        <div class="hero__overlay" aria-hidden="true"></div>
+        <div class="hero__noise" aria-hidden="true"></div>
+
+        <div class="hero__inner container">
+          <span class="badge badge--float">
+            <span class="badge__dot" aria-hidden="true"></span>
+            Gramado, RS &middot; Edição 2026
+          </span>
+
+          <h1 class="hero-h1">
+            Silencie o Ruído Mental<br />
+            <span class="text-gold">e Retome o Governo</span> da Sua Vida.
+          </h1>
+
+          <p class="hero__sub">
+            Uma imersão de 5 horas para líderes que alcançaram o sucesso mas perderam o controle de
+            si mesmos — e precisam definir o próximo ciclo antes que o preço seja alto demais.
+          </p>
+
+          <div class="hero__ctas">
+            <a class="btn btn--primary btn--lg cta-main" href="#ingressos" data-cta="hero-primary">
+              Quero meu ingresso
+            </a>
+            <a class="btn btn--ghost" href="#metodo" data-cta="hero-secondary">
+              <span aria-hidden="true">↓</span> Entenda o método
+            </a>
+          </div>
+
+          <div class="hero__meta">
+            <div class="hero__slots" aria-live="polite">
+              <span class="hero__slots-label">Apenas</span>
+              <strong class="hero__slots-num slots-count" data-slots>47</strong>
+              <span class="hero__slots-label">vagas disponíveis</span>
+            </div>
+
+            <div class="countdown" data-countdown aria-label="Tempo restante para o evento">
+              <div class="countdown__item">
+                <span class="countdown__value" data-cd="days">--</span>
+                <span class="countdown__label">dias</span>
+              </div>
+              <div class="countdown__sep" aria-hidden="true">:</div>
+              <div class="countdown__item">
+                <span class="countdown__value" data-cd="hours">--</span>
+                <span class="countdown__label">horas</span>
+              </div>
+              <div class="countdown__sep" aria-hidden="true">:</div>
+              <div class="countdown__item">
+                <span class="countdown__value" data-cd="minutes">--</span>
+                <span class="countdown__label">min</span>
+              </div>
+              <div class="countdown__sep" aria-hidden="true">:</div>
+              <div class="countdown__item">
+                <span class="countdown__value" data-cd="seconds">--</span>
+                <span class="countdown__label">seg</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SEÇÃO 2 — DOR ESPELHADA ==================== -->
+      <section class="pain-section section" id="dor">
+        <div class="container">
+          <header class="section__head">
+            <span class="eyebrow">Diagnóstico honesto</span>
+            <h2 class="section__title">Você reconhece alguém assim?</h2>
+            <p class="section__lead">
+              Você não está exausto por falta de força. Está exausto por excesso de ruído.
+            </p>
+          </header>
+
+          <ul class="pain-list" role="list">
+            <li class="pain-item">
+              <svg class="pain-item__icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12.5l4.5 4.5L19 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Toma decisões no piloto automático, exausto demais para pensar.</span>
+            </li>
+            <li class="pain-item">
+              <svg class="pain-item__icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12.5l4.5 4.5L19 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Acordou de madrugada com problemas que não consegue resolver.</span>
+            </li>
+            <li class="pain-item">
+              <svg class="pain-item__icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12.5l4.5 4.5L19 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>O sucesso chegou, mas você se perdeu no caminho.</span>
+            </li>
+            <li class="pain-item">
+              <svg class="pain-item__icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12.5l4.5 4.5L19 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Está distante da família mesmo estando presente fisicamente.</span>
+            </li>
+            <li class="pain-item">
+              <svg class="pain-item__icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12.5l4.5 4.5L19 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Medo que uma decisão errada destrua o que construiu.</span>
+            </li>
+            <li class="pain-item">
+              <svg class="pain-item__icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12.5l4.5 4.5L19 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Ninguém ao redor entende o peso que você carrega.</span>
+            </li>
+          </ul>
+
+          <p class="pain-closing">
+            O problema não é falta de informação.<br />
+            <span class="text-gold">É o ruído que impede você de ouvir a si mesmo.</span>
+          </p>
+        </div>
+      </section>
+
+      <!-- ==================== SEÇÃO 3 — O MÉTODO (4 PILARES) ==================== -->
+      <section class="pillars-section section section--deep" id="metodo">
+        <div class="container">
+          <header class="section__head">
+            <span class="eyebrow">A metodologia</span>
+            <h2 class="section__title">Os 4 pilares da Virada</h2>
+            <p class="section__lead">
+              Em 5 horas, você para de sobreviver ao sucesso e começa a governar sua vida.
+            </p>
+          </header>
+
+          <div class="pillars-grid">
+            <article class="pilar-card" style="--accent: var(--accent-cool)">
+              <div class="pilar-card__num" aria-hidden="true">01</div>
+              <div class="pilar-card__tag">Silenciar</div>
+              <h3 class="pilar-card__title">O Silêncio que Abre Tudo</h3>
+              <p class="pilar-card__text">
+                Performance musical ao vivo como tecnologia de descompressão. Em minutos, o ruído
+                para. O cérebro abre.
+              </p>
+            </article>
+
+            <article class="pilar-card" style="--accent: var(--accent-warm)">
+              <div class="pilar-card__num" aria-hidden="true">02</div>
+              <div class="pilar-card__tag">Enxergar</div>
+              <h3 class="pilar-card__title">A Ciência do Seu Esgotamento</h3>
+              <p class="pilar-card__text">
+                Neurociência + TCC: você mapeia os 20% de ciclos que geram 80% do seu desgaste.
+                Angústia vira diagnóstico.
+              </p>
+            </article>
+
+            <article class="pilar-card" style="--accent: #ffffff">
+              <div class="pilar-card__num" aria-hidden="true">03</div>
+              <div class="pilar-card__tag">Governar</div>
+              <h3 class="pilar-card__title">O Jantar que Muda Sua Postura</h3>
+              <p class="pilar-card__text">
+                O Jantar de Gala não é comida — é um exercício de presença. Você volta a ocupar o
+                lugar de honra que abandonou.
+              </p>
+            </article>
+
+            <article class="pilar-card" style="--accent: var(--accent-warm)">
+              <div class="pilar-card__num" aria-hidden="true">04</div>
+              <div class="pilar-card__tag">Redirecionar</div>
+              <h3 class="pilar-card__title">Sua Partitura do Legado</h3>
+              <p class="pilar-card__text">
+                Você escreve quais ciclos encerrar e quais diretrizes assumir. Sai com uma rota —
+                não apenas inspirado.
+              </p>
+            </article>
+          </div>
+
+          <p class="pillars-closing">
+            Sua empresa precisa que você pense com clareza. Sua família precisa que você esteja
+            presente. Seu legado precisa das decisões certas.
+            <strong class="text-gold">A Virada te dá os três.</strong>
+          </p>
+        </div>
+      </section>
+
+      <!-- ==================== SEÇÃO 4 — MENTORES ==================== -->
+      <section class="mentors-section section" id="mentores">
+        <div class="container">
+          <header class="section__head">
+            <span class="eyebrow">Quem conduz a noite</span>
+            <h2 class="section__title">Mentores e <em>performers</em></h2>
+            <p class="section__lead">Três presenças que se encontram para devolver o que o sucesso tirou.</p>
+          </header>
+
+          <div class="mentors-grid">
+            <article class="mentor-card mentor-card--gold">
+              <div class="mentor-card__photo">
+                <img
+                  src="assets/persons/iran%20mariano.jpeg"
+                  alt="Iran Mariano, mentor da Virada Extraordinária"
+                  loading="lazy"
+                  decoding="async"
+                  width="240"
+                  height="240"
+                />
+              </div>
+              <h3 class="mentor-card__name">Iran Mariano</h3>
+              <span class="mentor-card__role">Liderança · Governo Pessoal · Neurociência + TCC</span>
+              <p class="mentor-card__bio">
+                Iran Mariano estudou por anos por que líderes bem-sucedidos perdem o governo de si
+                mesmos — e criou a metodologia que devolve o que o sucesso tirou: clareza, propósito
+                e presença. Autor de <em>"De Órfão a Governante de Si Mesmo"</em>.
+              </p>
+              <a
+                class="mentor-card__social"
+                href="https://instagram.com/sou.iranmariano"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram de Iran Mariano"
+              >
+                @sou.iranmariano
+              </a>
+            </article>
+
+            <article class="mentor-card mentor-card--cyan">
+              <div class="mentor-card__photo">
+                <img
+                  src="assets/persons/gleidison.jpg"
+                  alt="Gledison Maestro, performer e maestro"
+                  loading="lazy"
+                  decoding="async"
+                  width="240"
+                  height="240"
+                />
+              </div>
+              <h3 class="mentor-card__name">Gledison Maestro</h3>
+              <span class="mentor-card__role">Maestro · Performer Cênico · Pilar do Silenciamento</span>
+              <p class="mentor-card__bio">
+                Em mãos de Gledison, 20 minutos de performance fazem o que 2 horas de meditação não
+                conseguem: silenciar o ruído que bloqueia suas melhores decisões.
+              </p>
+              <a
+                class="mentor-card__social"
+                href="https://instagram.com/gledison_maestro"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram de Gledison Maestro"
+              >
+                @gledison_maestro
+              </a>
+            </article>
+
+            <article class="mentor-card mystery-card" aria-label="Terceiro participante a ser revelado">
+              <div class="mystery-card__seal" aria-hidden="true">
+                <svg viewBox="0 0 64 64" width="64" height="64">
+                  <defs>
+                    <radialGradient id="sealGrad" cx="50%" cy="40%" r="60%">
+                      <stop offset="0%" stop-color="#f0c860"/>
+                      <stop offset="60%" stop-color="#d4a843"/>
+                      <stop offset="100%" stop-color="#8a6a1a"/>
+                    </radialGradient>
+                  </defs>
+                  <circle cx="32" cy="32" r="22" fill="url(#sealGrad)" stroke="#3a2a08" stroke-width="1"/>
+                  <circle cx="32" cy="32" r="16" fill="none" stroke="#3a2a08" stroke-width="0.6" stroke-dasharray="2 2"/>
+                  <text x="32" y="38" text-anchor="middle" font-family="Playfair Display, serif" font-weight="700" font-size="14" fill="#2a1c00">VE</text>
+                </svg>
+              </div>
+              <div class="mystery-card__envelope" aria-hidden="true">
+                <svg viewBox="0 0 200 130" width="100%" height="100%" preserveAspectRatio="none">
+                  <rect x="2" y="2" width="196" height="126" rx="4" fill="rgba(255,255,255,0.04)" stroke="rgba(212,168,67,0.5)" stroke-width="1"/>
+                  <polyline points="2,2 100,80 198,2" fill="none" stroke="rgba(212,168,67,0.55)" stroke-width="1"/>
+                  <polyline points="2,128 80,70" fill="none" stroke="rgba(212,168,67,0.35)" stroke-width="1"/>
+                  <polyline points="198,128 120,70" fill="none" stroke="rgba(212,168,67,0.35)" stroke-width="1"/>
+                </svg>
+              </div>
+              <div class="mystery-card__content">
+                <span class="mystery-card__tag">Lacrado</span>
+                <h3 class="mentor-card__name">Terceiro participante</h3>
+                <p class="mentor-card__bio">
+                  Em breve — anúncio especial.<br />
+                  Siga Iran no Instagram para saber primeiro.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SEÇÃO 5 — GRAMADO ==================== -->
+      <section class="gramado-section section" id="gramado">
+        <div class="gramado-bg" aria-hidden="true">
+          <img
+            src="https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=1920&q=70&fm=webp"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div class="gramado-section__overlay" aria-hidden="true"></div>
+
+        <div class="container">
+          <header class="section__head">
+            <span class="eyebrow">O local como personagem</span>
+            <h2 class="section__title">Por que Gramado?</h2>
+          </header>
+
+          <p class="gramado-text">
+            A 855 metros de altitude, entre pinheiros e o frio que acalma o sistema nervoso,
+            Gramado tem um efeito comprovado de desaceleração — o mesmo ambiente que vai preparar
+            seu cérebro para as melhores decisões da sua vida.
+          </p>
+
+          <div class="gramado-gallery">
+            <figure class="gramado-gallery__item">
+              <img
+                src="https://images.unsplash.com/photo-1583416750470-965b2707b355?auto=format&fit=crop&w=720&q=68&fm=webp"
+                alt="Panorama noturno de Gramado, RS"
+                loading="lazy"
+                decoding="async"
+                width="720"
+                height="900"
+              />
+              <figcaption>Gramado · vista noturna</figcaption>
+            </figure>
+            <figure class="gramado-gallery__item">
+              <img
+                src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=720&q=68&fm=webp"
+                alt="Interior aconchegante de restaurante premium"
+                loading="lazy"
+                decoding="async"
+                width="720"
+                height="900"
+              />
+              <figcaption>Recreio Gramadense · interior</figcaption>
+            </figure>
+            <figure class="gramado-gallery__item">
+              <img
+                src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=720&q=68&fm=webp"
+                alt="Mesa montada para jantar de gala"
+                loading="lazy"
+                decoding="async"
+                width="720"
+                height="900"
+              />
+              <figcaption>Mesa de gala · noite do evento</figcaption>
+            </figure>
+          </div>
+
+          <aside class="venue-card">
+            <div class="venue-card__media">
+              <img
+                src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=720&q=68&fm=webp"
+                alt="Recreio Gramadense, ambiente do jantar"
+                loading="lazy"
+                decoding="async"
+                width="600"
+                height="400"
+              />
+            </div>
+            <div class="venue-card__body">
+              <span class="eyebrow">O palco escolhido</span>
+              <h3 class="venue-card__title">Sociedade Recreio Gramadense</h3>
+              <p>
+                Rua Garibaldi, 328 — Centro de Gramado/RS. Um dos endereços mais tradicionais da
+                cidade. Aconchego de chalé, sofisticação de jantar de gala. O cenário onde o ruído
+                se desfaz e o líder reaparece.
+              </p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ==================== SEÇÃO 6 — INGRESSOS ==================== -->
+      <section class="tickets-section section section--max-deep" id="ingressos">
+        <div class="container">
+          <header class="section__head">
+            <span class="eyebrow">Garanta sua vaga</span>
+            <h2 class="section__title">Escolha sua experiência</h2>
+            <p class="section__lead">
+              Apenas <strong class="slots-count" data-slots>47</strong> vagas — preenchidas por ordem
+              de pagamento.
+            </p>
+          </header>
+
+          <div class="tickets-grid" id="ticketsGrid">
+            <!-- Cards renderizados via JS a partir de config.tickets -->
+          </div>
+
+          <div class="tickets-foot">
+            <p class="tickets-urgency">
+              <span class="dot-pulse" aria-hidden="true"></span>
+              Apenas <strong class="slots-count" data-slots>47</strong> vagas — preenchidas por ordem
+              de pagamento.
+            </p>
+            <ul class="trust-seals" role="list">
+              <li class="trust-seals__item">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                  <path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                  <path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Pagamento seguro
+              </li>
+              <li class="trust-seals__item">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                  <rect x="3" y="6" width="18" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="M3 10h18" stroke="currentColor" stroke-width="1.6"/>
+                </svg>
+                Parcelamento em até 12x
+              </li>
+              <li class="trust-seals__item">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                  <path d="M4 12c0-4.4 3.6-8 8-8s8 3.6 8 8-3.6 8-8 8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                  <path d="M4 12h6m-3-3l-3 3 3 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Plataforma Greenn
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SEÇÃO 7 — PROVA SOCIAL ==================== -->
+      <section class="social-proof-section section" id="prova">
+        <div class="container">
+          <header class="section__head">
+            <span class="eyebrow">Quem já viveu</span>
+            <h2 class="section__title">Líderes que voltaram diferentes</h2>
+            <p class="section__lead">
+              Líderes que passaram pela Virada não voltaram os mesmos. Voltaram como governantes.
+            </p>
+          </header>
+
+          <div class="counters-section">
+            <div class="counter-block">
+              <span class="counter" data-end="320">0</span>
+              <span class="counter-block__label">líderes transformados</span>
+            </div>
+            <div class="counter-block">
+              <span class="counter" data-end="14">0</span>
+              <span class="counter-block__label">estados alcançados</span>
+            </div>
+            <div class="counter-block">
+              <span class="counter" data-end="7">0</span>
+              <span class="counter-block__label">anos de metodologia</span>
+            </div>
+          </div>
+
+          <div class="swiper testimonials-swiper" aria-roledescription="carrossel">
+            <div class="swiper-wrapper" id="testimonialsTrack">
+              <!-- Slides renderizados via JS -->
+            </div>
+            <div class="swiper-pagination"></div>
+            <button class="swiper-button-prev" aria-label="Depoimento anterior"></button>
+            <button class="swiper-button-next" aria-label="Próximo depoimento"></button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SEÇÃO 8 — FAQ ==================== -->
+      <section class="faq-section section section--deep" id="faq">
+        <div class="container container--narrow">
+          <header class="section__head">
+            <span class="eyebrow">Perguntas frequentes</span>
+            <h2 class="section__title">Antes de garantir, você precisa saber</h2>
+          </header>
+
+          <div class="faq" id="faqList">
+            <details class="faq-item">
+              <summary class="faq-item__q">
+                <span>Para quem é a Virada Extraordinária?</span>
+                <span class="faq-item__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-item__a">
+                Para empresários, CEOs e Pastores entre 35 e 58 anos que carregam alto nível de
+                responsabilidade e sentem que o sucesso veio acompanhado de exaustão, ruído mental
+                e distância afetiva. Se você precisa redefinir o próximo ciclo da sua vida com
+                clareza, a Virada foi pensada para você.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-item__q">
+                <span>Tem componente religioso?</span>
+                <span class="faq-item__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-item__a">
+                A metodologia é executiva e baseada em neurociência e TCC. Iran traz, quando
+                pertinente, uma <em>espiritualidade prática</em> sem proselitismo. Pastores e
+                líderes seculares convivem na mesma sala em postura de governo, não de doutrina.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-item__q">
+                <span>O que está incluído no ingresso?</span>
+                <span class="faq-item__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-item__a">
+                Cinco horas de imersão presencial, performance ao vivo de Gledison Maestro,
+                metodologia <strong>Partitura do Legado</strong> (com material entregue em mãos),
+                jantar de gala no Recreio Gramadense e network direto com outros líderes da
+                edição. Versões Diamond incluem benefícios premium descritos em cada card de
+                ingresso.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-item__q">
+                <span>Posso parcelar?</span>
+                <span class="faq-item__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-item__a">
+                Sim. O checkout via plataforma Greenn aceita cartão em até 12x, Pix à vista e
+                boleto bancário. Parcelamento sujeito às taxas da operadora.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-item__q">
+                <span>Qual a política de cancelamento?</span>
+                <span class="faq-item__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-item__a">
+                Você tem 7 dias corridos a partir da compra para reembolso integral, conforme o
+                Código de Defesa do Consumidor. Após esse prazo, o ingresso pode ser transferido
+                para outro líder mediante solicitação até 15 dias antes do evento.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-item__q">
+                <span>Qual é o endereço exato?</span>
+                <span class="faq-item__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-item__a">
+                O encontro acontece no <strong>Recreio Gramadense</strong>, em Gramado/RS. O
+                endereço completo, mapa e orientações de chegada são enviados por e-mail e
+                WhatsApp aos confirmados.
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary class="faq-item__q">
+                <span>Preciso ter empresa para participar?</span>
+                <span class="faq-item__icon" aria-hidden="true"></span>
+              </summary>
+              <div class="faq-item__a">
+                Não obrigatoriamente. A Virada é para quem ocupa um lugar de governo: empresário,
+                CEO, pastor, líder de equipes ou pessoa em alta responsabilidade — independente do
+                CNPJ. O critério é o peso da decisão que você carrega, não o cargo no contrato
+                social.
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SEÇÃO 9 — CTA FINAL ==================== -->
+      <section class="final-cta-section" id="decisao">
+        <div class="final-cta-section__bg" aria-hidden="true"></div>
+        <div class="final-cta-section__overlay" aria-hidden="true"></div>
+
+        <div class="container container--narrow">
+          <h2 class="final-cta-section__title">
+            Você pode continuar sobrevivendo ao sucesso.<br />
+            <span class="text-gold">Ou pode escolher governar a sua vida.</span>
+          </h2>
+
+          <p class="final-cta-section__sub">
+            O jantar de gala não é o encerramento da noite.
+            <strong>É o renascimento do líder.</strong>
+          </p>
+
+          <div class="countdown countdown--lg" data-countdown aria-label="Tempo restante para o evento">
+            <div class="countdown__item">
+              <span class="countdown__value" data-cd="days">--</span>
+              <span class="countdown__label">dias</span>
+            </div>
+            <div class="countdown__sep" aria-hidden="true">:</div>
+            <div class="countdown__item">
+              <span class="countdown__value" data-cd="hours">--</span>
+              <span class="countdown__label">horas</span>
+            </div>
+            <div class="countdown__sep" aria-hidden="true">:</div>
+            <div class="countdown__item">
+              <span class="countdown__value" data-cd="minutes">--</span>
+              <span class="countdown__label">min</span>
+            </div>
+            <div class="countdown__sep" aria-hidden="true">:</div>
+            <div class="countdown__item">
+              <span class="countdown__value" data-cd="seconds">--</span>
+              <span class="countdown__label">seg</span>
+            </div>
+          </div>
+
+          <a
+            class="btn btn--primary btn--xl cta-main"
+            href="#ingressos"
+            data-cta="final"
+          >
+            Sim, quero governar minha vida
+          </a>
+
+          <p class="final-cta-section__note">
+            Apenas <strong class="slots-count" data-slots>47</strong> vagas. Pagamento seguro via
+            Greenn. Parcelamento em até 12x.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==================== SEÇÃO 10 — RODAPÉ ==================== -->
+    <footer class="site-footer" id="rodape">
+      <div class="container">
+        <div class="site-footer__grid">
+          <div class="site-footer__col">
+            <a class="brand" href="#hero" aria-label="Virada Extraordinária — voltar ao topo">
+              <span class="brand__mark" aria-hidden="true">VE</span>
+              <span class="brand__name">
+                Virada<br /><span class="brand__sub">Extraordinária</span>
+              </span>
+            </a>
+            <p class="site-footer__tag">
+              Imersão presencial para líderes no limite do esgotamento.<br />
+              Gramado, RS · Edição 2026.
+            </p>
+          </div>
+
+          <div class="site-footer__col">
+            <h4 class="site-footer__title">Mentores</h4>
+            <ul class="site-footer__list" role="list">
+              <li>
+                <a href="https://instagram.com/sou.iranmariano" target="_blank" rel="noopener noreferrer">
+                  Iran Mariano · @sou.iranmariano
+                </a>
+              </li>
+              <li>
+                <a href="https://instagram.com/gledison_maestro" target="_blank" rel="noopener noreferrer">
+                  Gledison Maestro · @gledison_maestro
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="site-footer__col">
+            <h4 class="site-footer__title">Suporte</h4>
+            <ul class="site-footer__list" role="list">
+              <li>
+                <a class="site-footer__wpp" id="footerWhatsapp" href="#" target="_blank" rel="noopener noreferrer">
+                  <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+                    <path d="M20 12a8 8 0 0 1-12.2 6.8L4 20l1.3-3.6A8 8 0 1 1 20 12z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                    <path d="M9 9c0 3 3 6 6 6l1.5-1.5-2-1-1 1c-1.5-.5-2.5-1.5-3-3l1-1-1-2L9 9z" fill="currentColor"/>
+                  </svg>
+                  Falar no WhatsApp
+                </a>
+              </li>
+              <li><a href="#politica-privacidade">Política de Privacidade</a></li>
+              <li><a href="#termos">Termos de Uso</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="site-footer__bottom">
+          <span>© <span id="footerYear">2026</span> Virada Extraordinária. Todos os direitos reservados.</span>
+          <span class="site-footer__legal">CNPJ a divulgar · Pagamentos via Greenn</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ==================== EXIT INTENT MODAL ==================== -->
+    <div class="modal" id="exitModal" role="dialog" aria-modal="true" aria-labelledby="exitTitle" aria-hidden="true">
+      <div class="modal__backdrop" data-modal-close></div>
+      <div class="modal__panel">
+        <button class="modal__close" type="button" aria-label="Fechar" data-modal-close>×</button>
+        <span class="eyebrow">Antes de sair</span>
+        <h3 class="modal__title" id="exitTitle">Tire sua dúvida pelo WhatsApp</h3>
+        <p class="modal__text">
+          A Virada não é para todo mundo — e tudo bem. Se faz sentido pra você, vamos conversar
+          direto com nosso time. Sem pressão, sem desconto. Só clareza.
+        </p>
+        <a class="btn btn--primary btn--lg" id="exitWhatsapp" href="#" target="_blank" rel="noopener noreferrer">
+          Falar com o time agora
+        </a>
+        <button class="modal__dismiss" type="button" data-modal-close>Continuar lendo a página</button>
+      </div>
+    </div>
+
+    <!-- ==================== SOCIAL PROOF TOAST ==================== -->
+    <div class="toast" id="socialToast" role="status" aria-live="polite" aria-hidden="true">
+      <div class="toast__avatar" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="22" height="22">
+          <circle cx="12" cy="8" r="4" fill="currentColor"/>
+          <path d="M3 21c1-4.5 4.5-7 9-7s8 2.5 9 7" fill="currentColor"/>
+        </svg>
+      </div>
+      <div class="toast__body">
+        <strong class="toast__name">João R.</strong>
+        <span class="toast__text">de <span class="toast__city">Porto Alegre</span> garantiu o ingresso <span class="toast__ticket">Diamond</span></span>
+        <span class="toast__time">há instantes</span>
+      </div>
+    </div>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js" defer></script>
+
+    <script src="js/config.js" defer></script>
+    <script src="js/analytics.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/countdown.js" defer></script>
+    <script src="js/conversion.js" defer></script>
+    <script src="js/animations.js" defer></script>
+    <script src="js/testimonials.js" defer></script>
+    <script src="js/faq.js" defer></script>
+  </body>
+</html>

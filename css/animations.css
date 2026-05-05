@@ -1,0 +1,116 @@
+/* ==========================================================================
+   ANIMATIONS — keyframes auxiliares + estados iniciais sincronizados com GSAP
+   ==========================================================================
+   GSAP cuida das animações de scroll. Este arquivo cuida apenas de:
+   - estados iniciais (FOUC prevention) para elementos animados,
+   - keyframes em CSS puro (badges, pulses, brilhos),
+   - utilitários de transition.
+   ========================================================================== */
+
+/* ===== Estados iniciais — escondidos antes do GSAP rodar (evita flash) ===== */
+.js-ready .pain-item,
+.js-ready .pilar-card,
+.js-ready .mentor-card,
+.js-ready .testimonial-card {
+  opacity: 0;
+}
+
+/* SplitType: o GSAP fará o `from` nos chars assim que estiverem prontos.
+   Mantemos o H1 visível quando JS desabilitado (graceful degradation). */
+.js-ready .hero-h1 .char {
+  display: inline-block;
+  will-change: transform, opacity;
+}
+
+/* CTA pulse — fallback CSS caso o GSAP demore a aplicar a animação */
+@keyframes ctaSoftPulse {
+  0%, 100% {
+    box-shadow:
+      0 10px 30px rgba(212, 168, 67, 0.25),
+      0 0 0 0 rgba(212, 168, 67, 0);
+  }
+  50% {
+    box-shadow:
+      0 14px 40px rgba(212, 168, 67, 0.45),
+      0 0 35px rgba(212, 168, 67, 0.25);
+  }
+}
+
+.cta-main {
+  animation: ctaSoftPulse 2.4s ease-in-out infinite;
+}
+
+/* Glow do mystery card — fallback CSS antes do GSAP iniciar */
+@keyframes mysteryGlow {
+  0%, 100% {
+    box-shadow:
+      0 0 0 0 rgba(212, 168, 67, 0),
+      0 0 30px rgba(212, 168, 67, 0.15);
+    border-color: rgba(212, 168, 67, 0.4);
+  }
+  50% {
+    box-shadow:
+      0 0 0 4px rgba(212, 168, 67, 0.18),
+      0 0 60px rgba(212, 168, 67, 0.45);
+    border-color: rgba(212, 168, 67, 0.85);
+  }
+}
+
+.mystery-card {
+  animation: mysteryGlow 3s ease-in-out infinite;
+}
+
+/* Subtle text shimmer no badge de "Mais Escolhido" */
+@keyframes shimmerTitle {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+.ticket-card--featured .ticket-card__name {
+  background: linear-gradient(
+    90deg,
+    var(--text-primary) 0%,
+    var(--accent-warm-light) 30%,
+    var(--text-primary) 60%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmerTitle 4s linear infinite;
+}
+
+/* Reveal classes (fallback se GSAP falhar) */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+.reveal-up.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Reduce motion — desliga tudo */
+@media (prefers-reduced-motion: reduce) {
+  .cta-main,
+  .mystery-card,
+  .badge--float,
+  .badge__dot,
+  .dot-pulse,
+  .ticket-card--featured::before,
+  .ticket-card--featured .ticket-card__name,
+  .mystery-card__seal {
+    animation: none !important;
+  }
+  .ticket-card--featured .ticket-card__name {
+    -webkit-text-fill-color: var(--text-primary);
+    color: var(--text-primary);
+  }
+  .js-ready .pain-item,
+  .js-ready .pilar-card,
+  .js-ready .mentor-card,
+  .js-ready .testimonial-card {
+    opacity: 1;
+  }
+}

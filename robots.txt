@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://viradaextraordinaria.com.br/sitemap.xml

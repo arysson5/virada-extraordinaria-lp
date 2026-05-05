@@ -1,0 +1,587 @@
+/* ==========================================================================
+   COMPONENTS — botões, badges, cards, sticky, toast, modal, FAQ, progress
+   ========================================================================== */
+
+/* ===========================================================
+   BOTÕES
+   =========================================================== */
+.btn {
+  --btn-bg: var(--accent-warm);
+  --btn-color: #1a1100;
+  --btn-border: transparent;
+  --btn-px: 1.6rem;
+  --btn-py: 0.95rem;
+  --btn-fs: 0.95rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: var(--btn-py) var(--btn-px);
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: var(--btn-fs);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: var(--btn-bg);
+  color: var(--btn-color);
+  border: 1px solid var(--btn-border);
+  border-radius: var(--r-pill);
+  cursor: pointer;
+  transition:
+    transform var(--t-base),
+    background var(--t-base),
+    box-shadow var(--t-base),
+    color var(--t-base);
+  white-space: nowrap;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn--primary {
+  background: linear-gradient(135deg, #f0c860 0%, #d4a843 60%, #b88a2a 100%);
+  color: #1a1100;
+  box-shadow: 0 10px 30px rgba(212, 168, 67, 0.25);
+}
+.btn--primary:hover {
+  box-shadow: 0 16px 40px rgba(212, 168, 67, 0.45);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border-strong);
+  text-transform: none;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+.btn--ghost:hover {
+  border-color: var(--accent-warm);
+  color: var(--accent-warm);
+}
+
+.btn--lg {
+  --btn-px: 2.2rem;
+  --btn-py: 1.15rem;
+  --btn-fs: 1rem;
+}
+
+.btn--xl {
+  --btn-px: 2.6rem;
+  --btn-py: 1.35rem;
+  --btn-fs: 1.05rem;
+}
+
+.btn--sm {
+  --btn-px: 1.1rem;
+  --btn-py: 0.65rem;
+  --btn-fs: 0.78rem;
+  letter-spacing: 0.06em;
+}
+
+.btn--block {
+  width: 100%;
+}
+
+/* ===========================================================
+   BADGE
+   =========================================================== */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--r-pill);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border-gold);
+  color: var(--text-primary);
+  font-family: var(--font-ui);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.badge--float {
+  animation: floatBadge 4.5s ease-in-out infinite;
+}
+
+@keyframes floatBadge {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.badge__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-warm);
+  box-shadow: 0 0 0 0 rgba(212, 168, 67, 0.6);
+  animation: dotPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes dotPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(212, 168, 67, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(212, 168, 67, 0);
+  }
+}
+
+.dot-pulse {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-warm);
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  animation: dotPulse 1.8s ease-in-out infinite;
+}
+
+/* ===========================================================
+   READING PROGRESS BAR (gatilho 4)
+   =========================================================== */
+.reading-progress {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.04);
+  z-index: var(--z-progress);
+  pointer-events: none;
+}
+.reading-progress__bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #d4a843, #f0c860);
+  box-shadow: 0 0 12px rgba(212, 168, 67, 0.55);
+  transition: width 0.08s linear;
+  will-change: width;
+}
+
+/* ===========================================================
+   STICKY CTA BAR (gatilho 1)
+   =========================================================== */
+.sticky-cta {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: var(--z-sticky);
+  background: rgba(6, 11, 20, 0.92);
+  border-top: 1px solid var(--border-gold);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transform: translateY(120%);
+  transition: transform var(--t-slow);
+  will-change: transform;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.45);
+}
+
+.sticky-cta.is-visible {
+  transform: translateY(0);
+}
+
+.sticky-cta__inner {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding: 0.75rem var(--container-pad);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.sticky-cta__text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-ui);
+  font-size: 0.875rem;
+  letter-spacing: 0.04em;
+  color: var(--text-primary);
+}
+.sticky-cta__text strong {
+  color: var(--accent-warm);
+  font-size: 1.05rem;
+}
+
+.sticky-cta__pulse {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--accent-warm);
+  animation: dotPulse 1.6s ease-in-out infinite;
+}
+
+@media (max-width: 480px) {
+  .sticky-cta__text strong {
+    font-size: 1rem;
+  }
+  .sticky-cta__inner {
+    padding: 0.6rem 0.85rem;
+    gap: 0.5rem;
+  }
+  .sticky-cta .btn--sm {
+    --btn-px: 0.9rem;
+    --btn-fs: 0.72rem;
+  }
+}
+
+/* ===========================================================
+   COUNTDOWN
+   =========================================================== */
+.countdown {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-ui);
+}
+
+.countdown__item {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 56px;
+  padding: 0.55rem 0.6rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--r-md);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.countdown__value {
+  font-family: var(--font-display);
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--text-primary);
+  font-variant-numeric: tabular-nums;
+}
+
+.countdown__label {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  margin-top: 0.25rem;
+}
+
+.countdown__sep {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--accent-warm);
+  opacity: 0.6;
+  line-height: 1;
+}
+
+.countdown--lg .countdown__item {
+  min-width: 84px;
+  padding: 0.85rem 0.8rem;
+}
+.countdown--lg .countdown__value {
+  font-size: 2.4rem;
+}
+.countdown--lg .countdown__label {
+  font-size: 0.7rem;
+}
+
+@media (max-width: 480px) {
+  .countdown__item {
+    min-width: 48px;
+    padding: 0.45rem 0.4rem;
+  }
+  .countdown__value {
+    font-size: 1.25rem;
+  }
+  .countdown__sep {
+    display: none;
+  }
+  .countdown {
+    gap: 0.35rem;
+  }
+  .countdown--lg .countdown__item {
+    min-width: 64px;
+    padding: 0.7rem 0.55rem;
+  }
+  .countdown--lg .countdown__value {
+    font-size: 1.7rem;
+  }
+}
+
+/* ===========================================================
+   TOAST DE SOCIAL PROOF (gatilho 3)
+   =========================================================== */
+.toast {
+  position: fixed;
+  left: 1.25rem;
+  bottom: 1.25rem;
+  z-index: var(--z-toast);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  max-width: min(380px, calc(100vw - 2.5rem));
+  background: rgba(10, 22, 40, 0.92);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--r-md);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(140%);
+  opacity: 0;
+  pointer-events: none;
+  transition:
+    transform var(--t-slow),
+    opacity var(--t-slow);
+}
+
+.toast.is-visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.toast__avatar {
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-warm), #8a6a1a);
+  display: grid;
+  place-items: center;
+  color: var(--bg-primary);
+}
+
+.toast__body {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+  line-height: 1.35;
+}
+
+.toast__name {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.92rem;
+}
+.toast__text {
+  color: var(--text-muted);
+}
+.toast__ticket {
+  color: var(--accent-warm);
+  font-weight: 600;
+}
+.toast__time {
+  color: var(--text-faint);
+  font-size: 0.7rem;
+  letter-spacing: 0.05em;
+  margin-top: 0.15rem;
+}
+
+/* Em mobile o sticky CTA está embaixo — sobe o toast pra não cobrir */
+@media (max-width: 768px) {
+  .toast {
+    bottom: 5.5rem;
+    left: 0.75rem;
+    max-width: calc(100vw - 1.5rem);
+  }
+}
+
+/* ===========================================================
+   MODAL (exit intent — gatilho 2)
+   =========================================================== */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.modal.is-open {
+  display: flex;
+  animation: modalIn 0.32s ease-out;
+}
+
+.modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(3, 6, 12, 0.78);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.modal__panel {
+  position: relative;
+  max-width: 520px;
+  width: 100%;
+  background: linear-gradient(180deg, #11233f 0%, #0a1628 100%);
+  border: 1px solid var(--border-gold);
+  border-radius: var(--r-xl);
+  padding: clamp(1.75rem, 4vw, 2.5rem);
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+}
+
+.modal__close {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.85rem;
+  font-size: 1.6rem;
+  color: var(--text-muted);
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  transition: background var(--t-base), color var(--t-base);
+}
+.modal__close:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-primary);
+}
+
+.modal__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 4vw, 1.9rem);
+  margin: 0.5rem 0 1rem;
+}
+
+.modal__text {
+  font-size: var(--fs-md);
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.modal__dismiss {
+  display: inline-block;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: var(--text-faint);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+.modal__dismiss:hover {
+  color: var(--text-muted);
+}
+
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.96) translateY(8px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.modal.is-open .modal__panel {
+  animation: modalIn 0.32s ease-out;
+}
+
+/* ===========================================================
+   FAQ (acordion)
+   =========================================================== */
+.faq {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.faq-item {
+  border: 1px solid var(--border-soft);
+  border-radius: var(--r-md);
+  background: rgba(255, 255, 255, 0.025);
+  overflow: hidden;
+  transition: border-color var(--t-base), background var(--t-base);
+}
+
+.faq-item[open] {
+  border-color: var(--border-gold);
+  background: rgba(212, 168, 67, 0.04);
+}
+
+.faq-item__q {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.05rem 1.25rem;
+  font-family: var(--font-ui);
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-primary);
+  user-select: none;
+}
+.faq-item__q::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item__icon {
+  position: relative;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+.faq-item__icon::before,
+.faq-item__icon::after {
+  content: "";
+  position: absolute;
+  background: var(--accent-warm);
+  transition: transform var(--t-base);
+}
+.faq-item__icon::before {
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  transform: translateY(-50%);
+}
+.faq-item__icon::after {
+  left: 50%;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  transform: translateX(-50%);
+}
+.faq-item[open] .faq-item__icon::after {
+  transform: translateX(-50%) scaleY(0);
+}
+
+.faq-item__a {
+  padding: 0 1.25rem 1.15rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+/* ===========================================================
+   CARD BASE (mentores, depoimentos, etc.)
+   =========================================================== */
+.card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--r-lg);
+  padding: clamp(1.5rem, 3vw, 2rem);
+  transition: transform var(--t-base), border-color var(--t-base);
+}
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-strong);
+}

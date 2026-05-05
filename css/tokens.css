@@ -1,0 +1,88 @@
+/* ==========================================================================
+   DESIGN TOKENS — fonte única de verdade para cores, fontes e espaçamento
+   ========================================================================== */
+
+:root {
+  /* === Cores === */
+  --bg-deep: #060b14;       /* Fundo máximo contraste (Ingressos, CTA final) */
+  --bg-primary: #0a1628;    /* Fundo principal (azul marinha profundo) */
+  --bg-secondary: #1a3a6b;  /* Secundário (azul royal — Mentores) */
+  --bg-overlay: rgba(6, 11, 20, 0.7);
+
+  --accent-cool: #00a8ff;   /* Azul elétrico — brilhos, links, ciano */
+  --accent-cool-soft: rgba(0, 168, 255, 0.18);
+  --accent-warm: #d4a843;   /* Dourado âmbar — premium, VIP */
+  --accent-warm-soft: rgba(212, 168, 67, 0.18);
+  --accent-warm-glow: rgba(212, 168, 67, 0.45);
+  --accent-warm-light: #f0c860;
+
+  --text-primary: #ffffff;
+  --text-muted: #c8c8c8;
+  --text-faint: #8c97aa;
+
+  --border-soft: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.16);
+  --border-gold: rgba(212, 168, 67, 0.4);
+
+  /* === Tipografia === */
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-ui: "Montserrat", "Inter", system-ui, sans-serif;
+
+  --fs-xs: 0.75rem;     /* 12 */
+  --fs-sm: 0.875rem;    /* 14 */
+  --fs-base: 1rem;      /* 16 */
+  --fs-md: 1.125rem;    /* 18 */
+  --fs-lg: 1.25rem;     /* 20 */
+  --fs-xl: 1.5rem;      /* 24 */
+  --fs-2xl: 2rem;       /* 32 */
+  --fs-3xl: clamp(2rem, 4vw, 2.75rem);
+  --fs-4xl: clamp(2.25rem, 5vw, 3.5rem);
+  --fs-5xl: clamp(2.5rem, 6.4vw, 4.5rem);
+
+  /* === Espaçamento (escala 4) === */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.25rem;
+  --sp-6: 1.5rem;
+  --sp-7: 2rem;
+  --sp-8: 2.5rem;
+  --sp-9: 3rem;
+  --sp-10: 4rem;
+  --sp-11: 5rem;
+  --sp-12: 6rem;
+  --sp-13: 8rem;
+
+  /* === Radii === */
+  --r-sm: 6px;
+  --r-md: 12px;
+  --r-lg: 18px;
+  --r-xl: 28px;
+  --r-pill: 999px;
+
+  /* === Sombras === */
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 22px 60px rgba(0, 0, 0, 0.45);
+  --shadow-gold: 0 0 35px rgba(212, 168, 67, 0.45),
+    0 0 60px rgba(212, 168, 67, 0.18);
+
+  /* === Transições === */
+  --t-fast: 160ms cubic-bezier(0.4, 0, 0.2, 1);
+  --t-base: 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  --t-slow: 520ms cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* === Layout === */
+  --container-max: 1240px;
+  --container-narrow: 880px;
+  --container-pad: clamp(1.25rem, 4vw, 2.25rem);
+
+  /* === Z-index === */
+  --z-progress: 90;
+  --z-sticky: 80;
+  --z-toast: 70;
+  --z-modal: 100;
+  --z-skip: 9999;
+}
