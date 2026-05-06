@@ -11,7 +11,7 @@
 .js-ready .pain-item,
 .js-ready .pilar-card,
 .js-ready .mentor-card,
-.js-ready .testimonial-card {
+.js-ready .cronograma-step {
   opacity: 0;
 }
 
@@ -38,26 +38,6 @@
 
 .cta-main {
   animation: ctaSoftPulse 2.4s ease-in-out infinite;
-}
-
-/* Glow do mystery card — fallback CSS antes do GSAP iniciar */
-@keyframes mysteryGlow {
-  0%, 100% {
-    box-shadow:
-      0 0 0 0 rgba(212, 168, 67, 0),
-      0 0 30px rgba(212, 168, 67, 0.15);
-    border-color: rgba(212, 168, 67, 0.4);
-  }
-  50% {
-    box-shadow:
-      0 0 0 4px rgba(212, 168, 67, 0.18),
-      0 0 60px rgba(212, 168, 67, 0.45);
-    border-color: rgba(212, 168, 67, 0.85);
-  }
-}
-
-.mystery-card {
-  animation: mysteryGlow 3s ease-in-out infinite;
 }
 
 /* Subtle text shimmer no badge de "Mais Escolhido" */
@@ -94,13 +74,11 @@
 /* Reduce motion — desliga tudo */
 @media (prefers-reduced-motion: reduce) {
   .cta-main,
-  .mystery-card,
   .badge--float,
   .badge__dot,
   .dot-pulse,
   .ticket-card--featured::before,
-  .ticket-card--featured .ticket-card__name,
-  .mystery-card__seal {
+  .ticket-card--featured .ticket-card__name {
     animation: none !important;
   }
   .ticket-card--featured .ticket-card__name {
@@ -110,7 +88,7 @@
   .js-ready .pain-item,
   .js-ready .pilar-card,
   .js-ready .mentor-card,
-  .js-ready .testimonial-card {
+  .js-ready .cronograma-step {
     opacity: 1;
   }
 }

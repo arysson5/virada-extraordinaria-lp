@@ -38,8 +38,57 @@ window.SITE_CONFIG = {
      pastas indicadas e ajuste apenas o nome se necessário. */
   images: {
     heroBackground: "assets/images/ruido.jpg",
+    gramadoParallax: "assets/images/gramado%201.webp",
     iranPhoto: "assets/persons/iran%20mariano.jpeg",
     gledisonPhoto: "assets/persons/gleidison.jpg",
+    denisPhoto: "assets/persons/denisfaco.jpg",
+  },
+
+  /* ----------------------------------------------------------------------
+     CRONOGRAMA / FORMATO DA NOITE
+     ----------------------------------------------------------------------
+     Textos editáveis da seção “Cronograma”. Mantenha tom contextual —
+     não inclua horários nem temas por palestrante se ainda não estiverem
+     definidos; o layout só usa estes campos. */
+  cronograma: {
+    eyebrow: "Formato da noite",
+    title: "Uma noite em formato de jantar de gala",
+    lead:
+      "A Virada Extraordinária não é uma sequência seca de falas. É uma imersão onde conteúdo para líderes e linguagem artística caminham juntos — para você ouvir, sentir e integrar, sempre dentro da experiência do jantar.",
+    blocks: [
+      {
+        tag: "Experiência",
+        title: "O que é esse evento",
+        text:
+          "É uma noite única: ambiente de gala, ritmo pensado para líderes que precisam baixar o ruído mental — com acolhimento, densidade quando importa e espaço para respirar.",
+      },
+      {
+        tag: "Conteúdo",
+        title: "Palestras com propósito",
+        text:
+          "Haverá momentos de conteúdo executivo — governança de si, liderança, decisão e próximo ciclo — sem enrolação: cada bloco existe para devolver clareza e direção.",
+      },
+      {
+        tag: "Arte",
+        title: "Apresentações cênicas no fluxo",
+        text:
+          "Entre os blocos de conteúdo, entram apresentações teatrais e artísticas — sempre associadas ao tema em discussão, para que a mensagem também atravesse imagem, ritmo e emoção.",
+      },
+      {
+        tag: "Integração",
+        title: "Jantar e alta gastronomia",
+        text:
+          "O jantar não é um ‘intervalo’ à parte: faz parte do formato. Alta gastronomia e serviço refinado sustentam a noite — presença, conversa e imersão do começo ao fim.",
+      },
+      {
+        tag: "Ritmo",
+        title: "Como a noite se organiza",
+        text:
+          "Falas e cenas se alternam de forma intencional — você absorve o conteúdo, o palco traduz em arte e você volta ao próximo nível da conversa. Detalhes de ordem e tempos finos são conduzidos pela equipe na sala.",
+      },
+    ],
+    closingNote:
+      "Sem promessa de minutagem fixa nesta página: o importante é o formato — gala, conteúdo de alto nível e arte que conversa com o que está em jogo na sua vida.",
   },
 
   /* ----------------------------------------------------------------------
@@ -85,7 +134,7 @@ window.SITE_CONFIG = {
       ctaLabel: "Quero o Individual",
       benefits: [
         "5 horas de imersão presencial",
-        "Performance ao vivo de Gledison Maestro",
+        "Performance ao vivo de Gledison Martins",
         "Metodologia Partitura do Legado",
         "Coffee break premium",
         "Certificado de participação",
@@ -139,66 +188,6 @@ window.SITE_CONFIG = {
         "Material físico Partitura do Legado",
         "Acesso ao grupo VIP de pós-evento",
       ],
-    },
-  ],
-
-  /* ----------------------------------------------------------------------
-     DEPOIMENTOS (Swiper)
-     ---------------------------------------------------------------------- */
-  testimonials: [
-    {
-      name: "Marcelo Bastos",
-      role: "CEO · Indústria de embalagens",
-      city: "Caxias do Sul, RS",
-      quote:
-        "Cheguei achando que precisava de mais informação. Saí entendendo que precisava de silêncio. Em 5 horas a Virada virou meu próximo trimestre.",
-      photo:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=facearea&facepad=3&w=160&q=70&fm=webp",
-    },
-    {
-      name: "Renata Klein",
-      role: "Empresária · Varejo",
-      city: "Porto Alegre, RS",
-      quote:
-        "Eu estava decidindo no automático havia meses. A Partitura do Legado me deu uma rota — não inspiração. Voltei com clareza pra demitir, contratar e recomeçar.",
-      photo:
-        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=facearea&facepad=3&w=160&q=70&fm=webp",
-    },
-    {
-      name: "Pr. André Ferraz",
-      role: "Pastor · Equipe de 40 líderes",
-      city: "Curitiba, PR",
-      quote:
-        "Pastoreio uma comunidade grande, mas estava sem governo de mim. A noite em Gramado me devolveu o lugar que eu tinha abandonado dentro de casa.",
-      photo:
-        "https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=facearea&facepad=3&w=160&q=70&fm=webp",
-    },
-    {
-      name: "Carla Menezes",
-      role: "Sócia-fundadora · Tech",
-      city: "Florianópolis, SC",
-      quote:
-        "A performance do Gledison fez meu cérebro parar pela primeira vez em três anos. Foi onde minha próxima decisão estratégica nasceu.",
-      photo:
-        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=facearea&facepad=3&w=160&q=70&fm=webp",
-    },
-    {
-      name: "Eduardo Lemos",
-      role: "CEO · Holding agro",
-      city: "Cuiabá, MT",
-      quote:
-        "Sou cético com 'imersão'. Fui pelo formato executivo. Saí sabendo, com nome e sobrenome, quais ciclos da minha empresa eu precisava encerrar.",
-      photo:
-        "https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=facearea&facepad=3&w=160&q=70&fm=webp",
-    },
-    {
-      name: "Patrícia Vidal",
-      role: "Diretora executiva",
-      city: "Belo Horizonte, MG",
-      quote:
-        "A Virada não é palestra. É um exercício de presença. O jantar de gala mexeu mais comigo do que qualquer coach nos últimos 5 anos.",
-      photo:
-        "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=facearea&facepad=3&w=160&q=70&fm=webp",
     },
   ],
 

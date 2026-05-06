@@ -146,8 +146,6 @@
     <link rel="stylesheet" href="css/sections.css" />
     <link rel="stylesheet" href="css/animations.css" />
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -172,7 +170,8 @@
         "image": ["assets/images/ruido.jpg"],
         "performer": [
           { "@type": "Person", "name": "Iran Mariano" },
-          { "@type": "Person", "name": "Gledison Maestro" }
+          { "@type": "Person", "name": "Gledison Martins" },
+          { "@type": "Person", "name": "Denis Facco" }
         ],
         "organizer": {
           "@type": "Organization",
@@ -428,7 +427,12 @@
         </div>
       </section>
 
-      <!-- ==================== SEÇÃO 4 — MENTORES ==================== -->
+      <!-- ==================== SEÇÃO 4 — CRONOGRAMA ==================== -->
+      <section class="cronograma-section section section--deep" id="cronograma">
+        <div class="container" id="cronogramaMount"></div>
+      </section>
+
+      <!-- ==================== SEÇÃO 5 — MENTORES ==================== -->
       <section class="mentors-section section" id="mentores">
         <div class="container">
           <header class="section__head">
@@ -450,11 +454,11 @@
                 />
               </div>
               <h3 class="mentor-card__name">Iran Mariano</h3>
-              <span class="mentor-card__role">Liderança · Governo Pessoal · Neurociência + TCC</span>
+              <span class="mentor-card__role">Empresário Contábil · Intelligence Negócios · Neuroempreendedorismo</span>
               <p class="mentor-card__bio">
-                Iran Mariano estudou por anos por que líderes bem-sucedidos perdem o governo de si
-                mesmos — e criou a metodologia que devolve o que o sucesso tirou: clareza, propósito
-                e presença. Autor de <em>"De Órfão a Governante de Si Mesmo"</em>.
+                Empresário contábil, fundador da Intelligence Negócios, especialista em
+                Neuroempreendedorismo, pós-graduado em Neurociência comportamental e mentor da
+                Mansão Business.
               </p>
               <a
                 class="mentor-card__social"
@@ -471,71 +475,65 @@
               <div class="mentor-card__photo">
                 <img
                   src="assets/persons/gleidison.jpg"
-                  alt="Gledison Maestro, performer e maestro"
+                  alt="Gledison Martins, maestro"
                   loading="lazy"
                   decoding="async"
                   width="240"
                   height="240"
                 />
               </div>
-              <h3 class="mentor-card__name">Gledison Maestro</h3>
-              <span class="mentor-card__role">Maestro · Performer Cênico · Pilar do Silenciamento</span>
+              <h3 class="mentor-card__name">Gledison Martins</h3>
+              <span class="mentor-card__role">Maestro · Natal Luz de Gramado · Pastor</span>
               <p class="mentor-card__bio">
-                Em mãos de Gledison, 20 minutos de performance fazem o que 2 horas de meditação não
-                conseguem: silenciar o ruído que bloqueia suas melhores decisões.
+                Maestro, atuante por muitos anos na produção do Natal Luz de Gramado, pastor.
               </p>
               <a
                 class="mentor-card__social"
                 href="https://instagram.com/gledison_maestro"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Instagram de Gledison Maestro"
+                aria-label="Instagram de Gledison Martins"
               >
                 @gledison_maestro
               </a>
             </article>
 
-            <article class="mentor-card mystery-card" aria-label="Terceiro participante a ser revelado">
-              <div class="mystery-card__seal" aria-hidden="true">
-                <svg viewBox="0 0 64 64" width="64" height="64">
-                  <defs>
-                    <radialGradient id="sealGrad" cx="50%" cy="40%" r="60%">
-                      <stop offset="0%" stop-color="#f0c860"/>
-                      <stop offset="60%" stop-color="#d4a843"/>
-                      <stop offset="100%" stop-color="#8a6a1a"/>
-                    </radialGradient>
-                  </defs>
-                  <circle cx="32" cy="32" r="22" fill="url(#sealGrad)" stroke="#3a2a08" stroke-width="1"/>
-                  <circle cx="32" cy="32" r="16" fill="none" stroke="#3a2a08" stroke-width="0.6" stroke-dasharray="2 2"/>
-                  <text x="32" y="38" text-anchor="middle" font-family="Playfair Display, serif" font-weight="700" font-size="14" fill="#2a1c00">VE</text>
-                </svg>
+            <article class="mentor-card mentor-card--warm">
+              <div class="mentor-card__photo">
+                <img
+                  src="assets/persons/denisfaco.jpg"
+                  alt="Denis Facco, mentor"
+                  loading="lazy"
+                  decoding="async"
+                  width="240"
+                  height="240"
+                />
               </div>
-              <div class="mystery-card__envelope" aria-hidden="true">
-                <svg viewBox="0 0 200 130" width="100%" height="100%" preserveAspectRatio="none">
-                  <rect x="2" y="2" width="196" height="126" rx="4" fill="rgba(255,255,255,0.04)" stroke="rgba(212,168,67,0.5)" stroke-width="1"/>
-                  <polyline points="2,2 100,80 198,2" fill="none" stroke="rgba(212,168,67,0.55)" stroke-width="1"/>
-                  <polyline points="2,128 80,70" fill="none" stroke="rgba(212,168,67,0.35)" stroke-width="1"/>
-                  <polyline points="198,128 120,70" fill="none" stroke="rgba(212,168,67,0.35)" stroke-width="1"/>
-                </svg>
-              </div>
-              <div class="mystery-card__content">
-                <span class="mystery-card__tag">Lacrado</span>
-                <h3 class="mentor-card__name">Terceiro participante</h3>
-                <p class="mentor-card__bio">
-                  Em breve — anúncio especial.<br />
-                  Siga Iran no Instagram para saber primeiro.
-                </p>
-              </div>
+              <h3 class="mentor-card__name">Denis Facco</h3>
+              <span class="mentor-card__role">Mentor · Império da Honra · Autogoverno</span>
+              <p class="mentor-card__bio">
+                Mentor do Império da Honra. Lidera grupos a alcançar propósito, liderança,
+                produtividade e autogoverno.
+              </p>
+              <a
+                class="mentor-card__social"
+                href="https://www.instagram.com/eusoudenisfacco/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram de Denis Facco"
+              >
+                @eusoudenisfacco
+              </a>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- ==================== SEÇÃO 5 — GRAMADO ==================== -->
+      <!-- ==================== SEÇÃO 6 — GRAMADO ==================== -->
       <section class="gramado-section section" id="gramado">
         <div class="gramado-bg" aria-hidden="true">
           <img
-            src="https://images.unsplash.com/photo-1483728642387-6c3bdd6c93e5?auto=format&fit=crop&w=1920&q=70&fm=webp"
+            src="assets/images/gramado%201.webp"
             alt=""
             loading="lazy"
             decoding="async"
@@ -558,44 +556,55 @@
           <div class="gramado-gallery">
             <figure class="gramado-gallery__item">
               <img
-                src="https://images.unsplash.com/photo-1583416750470-965b2707b355?auto=format&fit=crop&w=720&q=68&fm=webp"
-                alt="Panorama noturno de Gramado, RS"
+                src="assets/images/recreio%20gramadense%201.webp"
+                alt="Fachada da Sociedade Recreio Gramadense à noite"
                 loading="lazy"
                 decoding="async"
                 width="720"
                 height="900"
               />
-              <figcaption>Gramado · vista noturna</figcaption>
+              <figcaption>Sociedade Recreio Gramadense · fachada</figcaption>
             </figure>
             <figure class="gramado-gallery__item">
               <img
-                src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=720&q=68&fm=webp"
-                alt="Interior aconchegante de restaurante premium"
+                src="assets/images/recreio%20gramadense%202.webp"
+                alt="Ambiente iluminado no Recreio Gramadense"
                 loading="lazy"
                 decoding="async"
                 width="720"
                 height="900"
               />
-              <figcaption>Recreio Gramadense · interior</figcaption>
+              <figcaption>Recreio Gramadense · ambiente</figcaption>
             </figure>
             <figure class="gramado-gallery__item">
               <img
-                src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=720&q=68&fm=webp"
-                alt="Mesa montada para jantar de gala"
+                src="assets/images/recreio%20gramadense%203.jpg"
+                alt="Palco e velas no salão do Recreio Gramadense"
                 loading="lazy"
                 decoding="async"
                 width="720"
                 height="900"
               />
-              <figcaption>Mesa de gala · noite do evento</figcaption>
+              <figcaption>Salão · atmosfera da noite</figcaption>
+            </figure>
+            <figure class="gramado-gallery__item">
+              <img
+                src="assets/images/recreio%20gramadense%204.jpg"
+                alt="Detalhes do espaço do Recreio Gramadense"
+                loading="lazy"
+                decoding="async"
+                width="720"
+                height="900"
+              />
+              <figcaption>Recreio Gramadense · detalhes</figcaption>
             </figure>
           </div>
 
           <aside class="venue-card">
             <div class="venue-card__media">
               <img
-                src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=720&q=68&fm=webp"
-                alt="Recreio Gramadense, ambiente do jantar"
+                src="assets/images/recreio%20gramadense%201.webp"
+                alt="Sociedade Recreio Gramadense, local do jantar de gala"
                 loading="lazy"
                 decoding="async"
                 width="600"
@@ -615,7 +624,7 @@
         </div>
       </section>
 
-      <!-- ==================== SEÇÃO 6 — INGRESSOS ==================== -->
+      <!-- ==================== SEÇÃO 7 — INGRESSOS ==================== -->
       <section class="tickets-section section section--max-deep" id="ingressos">
         <div class="container">
           <header class="section__head">
@@ -664,43 +673,6 @@
         </div>
       </section>
 
-      <!-- ==================== SEÇÃO 7 — PROVA SOCIAL ==================== -->
-      <section class="social-proof-section section" id="prova">
-        <div class="container">
-          <header class="section__head">
-            <span class="eyebrow">Quem já viveu</span>
-            <h2 class="section__title">Líderes que voltaram diferentes</h2>
-            <p class="section__lead">
-              Líderes que passaram pela Virada não voltaram os mesmos. Voltaram como governantes.
-            </p>
-          </header>
-
-          <div class="counters-section">
-            <div class="counter-block">
-              <span class="counter" data-end="320">0</span>
-              <span class="counter-block__label">líderes transformados</span>
-            </div>
-            <div class="counter-block">
-              <span class="counter" data-end="14">0</span>
-              <span class="counter-block__label">estados alcançados</span>
-            </div>
-            <div class="counter-block">
-              <span class="counter" data-end="7">0</span>
-              <span class="counter-block__label">anos de metodologia</span>
-            </div>
-          </div>
-
-          <div class="swiper testimonials-swiper" aria-roledescription="carrossel">
-            <div class="swiper-wrapper" id="testimonialsTrack">
-              <!-- Slides renderizados via JS -->
-            </div>
-            <div class="swiper-pagination"></div>
-            <button class="swiper-button-prev" aria-label="Depoimento anterior"></button>
-            <button class="swiper-button-next" aria-label="Próximo depoimento"></button>
-          </div>
-        </div>
-      </section>
-
       <!-- ==================== SEÇÃO 8 — FAQ ==================== -->
       <section class="faq-section section section--deep" id="faq">
         <div class="container container--narrow">
@@ -741,7 +713,7 @@
                 <span class="faq-item__icon" aria-hidden="true"></span>
               </summary>
               <div class="faq-item__a">
-                Cinco horas de imersão presencial, performance ao vivo de Gledison Maestro,
+                Cinco horas de imersão presencial, performance ao vivo de Gledison Martins,
                 metodologia <strong>Partitura do Legado</strong> (com material entregue em mãos),
                 jantar de gala no Recreio Gramadense e network direto com outros líderes da
                 edição. Versões Diamond incluem benefícios premium descritos em cada card de
@@ -881,7 +853,12 @@
               </li>
               <li>
                 <a href="https://instagram.com/gledison_maestro" target="_blank" rel="noopener noreferrer">
-                  Gledison Maestro · @gledison_maestro
+                  Gledison Martins · @gledison_maestro
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/eusoudenisfacco/" target="_blank" rel="noopener noreferrer">
+                  Denis Facco · @eusoudenisfacco
                 </a>
               </li>
             </ul>
@@ -950,16 +927,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js" defer></script>
-
     <script src="js/config.js" defer></script>
     <script src="js/analytics.js" defer></script>
     <script src="js/main.js" defer></script>
     <script src="js/countdown.js" defer></script>
     <script src="js/conversion.js" defer></script>
     <script src="js/animations.js" defer></script>
-    <script src="js/testimonials.js" defer></script>
     <script src="js/faq.js" defer></script>
   </body>
 </html>

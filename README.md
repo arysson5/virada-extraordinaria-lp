@@ -25,7 +25,6 @@ landing page/
 │   ├── countdown.js         (cronômetro do evento, persistente)
 │   ├── conversion.js        (sticky bar, exit-intent, toast, vagas, progress)
 │   ├── faq.js               (acordeão acessível)
-│   ├── testimonials.js      (Swiper de depoimentos)
 │   └── analytics.js         (Pixel Meta + GA4 + Clarity opcionais)
 ├── assets/
 │   ├── icons/favicon.svg
@@ -42,7 +41,15 @@ landing page/
 Tudo que precisa ser alterado fica em **`js/config.js`**. Os outros arquivos
 não exigem edição manual.
 
-### 2.1. Data e hora do evento (countdown)
+### 2.1. Cronograma / formato da noite
+
+Todo o texto da seção **Cronograma** vem de `SITE_CONFIG.cronograma` em
+`js/config.js`: `eyebrow`, `title`, `lead`, array `blocks` (cada item com
+`tag`, `title`, `text`) e opcionalmente `closingNote`. A página renderiza como
+**linha do tempo vertical** (sem horários). Edite só o config — o HTML é
+gerado em tempo de execução com escape seguro.
+
+### 2.2. Data e hora do evento (countdown)
 
 ```js
 event: {
@@ -54,7 +61,7 @@ event: {
 Use ISO 8601 com fuso `-03:00` (Brasília). O countdown recalcula em tempo
 real e exibe automaticamente nas duas instâncias da página (hero e CTA final).
 
-### 2.2. Vagas (gatilho de escassez)
+### 2.3. Vagas (gatilho de escassez)
 
 ```js
 slots: {
@@ -68,7 +75,7 @@ slots: {
 O número decrementa visualmente em intervalos aleatórios entre `min` e `max`
 minutos. Persiste por sessão (não reseta entre abas).
 
-### 2.3. WhatsApp de suporte
+### 2.4. WhatsApp de suporte
 
 ```js
 whatsapp: {
@@ -79,7 +86,7 @@ whatsapp: {
 
 Aplicado automaticamente nos links do rodapé e do popup de exit-intent.
 
-### 2.4. Links de checkout (Greenn)
+### 2.5. Links de checkout (Greenn)
 
 ```js
 tickets: [
@@ -99,7 +106,7 @@ tickets: [
 Apenas **um** ingresso pode ter `featured: true` — ele recebe o destaque
 visual e o badge "Mais Escolhido".
 
-### 2.5. Pixel Meta, GA4, Clarity
+### 2.6. Pixel Meta, GA4, Clarity
 
 ```js
 analytics: {
@@ -113,10 +120,10 @@ Cada um carrega **somente se o ID estiver preenchido**. PageView é disparado
 automaticamente. Cliques em qualquer `[data-cta]` são rastreados como
 `InitiateCheckout` (Pixel) e `select_content` (GA4).
 
-### 2.6. Depoimentos e toasts
+### 2.7. Toast de social proof
 
-Listas `testimonials` e `toastEntries` no `config.js` — adicione/remova à
-vontade. O Swiper e o gatilho de social proof se adaptam automaticamente.
+Lista `toastEntries` no `config.js` — edite para variar as mensagens do toast
+de social proof no canto da tela.
 
 ---
 
@@ -186,8 +193,6 @@ estático (Apache, Nginx, etc.) — não precisa de Node.js, PHP ou banco.
 | GSAP + ScrollTrigger | 3.12.5 | animações scroll-driven                  |
 | SplitType      | 0.3.4  | substituto open-source do SplitText (pago)    |
 | Lenis          | 1.1.13 | smooth scroll de alto desempenho              |
-| Swiper.js      | 11     | carrossel de depoimentos                      |
-| CountUp.js     | 2.8.0  | contadores animados                           |
 
 > **Por que SplitType e não SplitText?**
 > O `SplitText` é plugin pago (Club GreenSock). O `SplitType` é open-source,
@@ -205,7 +210,7 @@ estático (Apache, Nginx, etc.) — não precisa de Node.js, PHP ou banco.
 - Fontes com `font-display: swap` + preconnect
 - Imagens `loading="lazy"` (exceto hero, com `fetchpriority="high"`)
 - CSS crítico inline + scripts com `defer`
-- Hero pré-carregado via `<link rel="preload" imagesrcset="...">`
+- Hero pré-carregado via `<link rel="preload" as="image" href="...">`
 
 ---
 
@@ -213,12 +218,11 @@ estático (Apache, Nginx, etc.) — não precisa de Node.js, PHP ou banco.
 
 - [x] Responsivo mobile-first (375px, 768px, 1280px)
 - [x] PageSpeed mirado > 85 (WebP, lazy load, CSS crítico inline, defer)
-- [ ] Todos os CTAs apontando para Greenn — **substituir URLs em `config.js`**
+- [x] CTAs de ingresso apontam para o checkout Greenn (`checkoutUrl` em `config.js`)
 - [x] Countdown com data real e persistência localStorage
 - [x] Toast de social proof a cada 90s
 - [x] Exit intent (desktop) com WhatsApp, sem desconto
 - [x] Sticky bar aparece após 500px de scroll
-- [x] Card misterioso com pulse dourado infinito
 - [ ] Pixel Meta — **preencher `analytics.metaPixelId` em `config.js`**
 - [ ] WhatsApp — **preencher `whatsapp.number` em `config.js`**
 - [x] Fontes com `font-display: swap`

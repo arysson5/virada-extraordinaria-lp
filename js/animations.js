@@ -1,12 +1,10 @@
 /* =========================================================================
-   ANIMATIONS — implementa exatamente os 7 snippets GSAP do briefing
-   - Hero headline (SplitType — substituto open-source do SplitText pago)
+   ANIMATIONS — GSAP + ScrollTrigger (landing Virada Extraordinária)
+   - Hero headline (SplitType)
    - Pain checklist reveal
    - Pillars scale reveal
    - CTA pulse dourado
    - Parallax Gramado
-   - Counters animados (CountUp.js)
-   - Mystery card pulse infinito
    Respeita prefers-reduced-motion via gsap.matchMedia.
    ========================================================================= */
 
@@ -152,73 +150,28 @@
           });
         }
 
-        // ---------------------------------------------------------
-        // 6. Contadores animados (CountUp.js)
-        // ---------------------------------------------------------
-        const startCounters = () => {
-          if (typeof window.countUp === "undefined" && typeof window.CountUp === "undefined") {
-            // Fallback nativo simples
-            document.querySelectorAll(".counter").forEach((el) => {
-              const end = parseInt(el.dataset.end || "0", 10);
-              const duration = 1800;
-              const start = performance.now();
-              const tick = (now) => {
-                const p = Math.min((now - start) / duration, 1);
-                const eased = 1 - Math.pow(1 - p, 3);
-                el.textContent = Math.round(end * eased).toString();
-                if (p < 1) requestAnimationFrame(tick);
-              };
-              requestAnimationFrame(tick);
-            });
-            return;
-          }
-
-          const Ctor =
-            (window.countUp && window.countUp.CountUp) ||
-            window.CountUp;
-
-          document.querySelectorAll(".counter").forEach((el) => {
-            const end = parseInt(el.dataset.end || "0", 10);
-            try {
-              const cu = new Ctor(el, end, {
-                duration: 2,
-                useEasing: true,
-                separator: ".",
-              });
-              if (!cu.error) cu.start();
-              else el.textContent = end.toString();
-            } catch (e) {
-              el.textContent = end.toString();
-            }
-          });
-        };
-
+        // Cronograma — reveal no scroll (conteúdo injetado no DOMContentLoaded)
         ScrollTrigger.create({
-          trigger: ".counters-section",
-          start: "top 75%",
+          trigger: ".cronograma-section",
+          start: "top 72%",
           once: true,
-          onEnter: startCounters,
+          onEnter: () => {
+            const steps = gsap.utils.toArray(".cronograma-step");
+            if (!steps.length) return;
+            gsap.set(steps, { opacity: 1 });
+            gsap.from(steps, {
+              opacity: 0,
+              x: rich ? -12 : 0,
+              y: rich ? 28 : 12,
+              stagger: rich ? 0.14 : 0.06,
+              duration: rich ? 0.72 : 0.36,
+              ease: "power2.out",
+            });
+          },
         });
 
         // ---------------------------------------------------------
-        // 7. Card misterioso — pulse dourado infinito
-        // ---------------------------------------------------------
-        const mystery = document.querySelector(".mystery-card");
-        if (mystery && rich) {
-          // Remove animação CSS pra evitar conflito
-          mystery.style.animation = "none";
-          gsap.to(mystery, {
-            boxShadow:
-              "0 0 20px rgba(212, 168, 67, 0.5), 0 0 60px rgba(212, 168, 67, 0.25)",
-            repeat: -1,
-            yoyo: true,
-            duration: 2,
-            ease: "sine.inOut",
-          });
-        }
-
-        // ---------------------------------------------------------
-        // BÔNUS — Reveal dos cards de mentores e depoimentos
+        // BÔNUS — Reveal dos cards de mentores
         // ---------------------------------------------------------
         const mentorCards = gsap.utils.toArray(".mentor-card");
         if (mentorCards.length) {

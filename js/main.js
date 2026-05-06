@@ -63,7 +63,62 @@
   }
 
   /* ----------------------------------------------------------------------
-     RENDER — Ingressos (Seção 6)
+     Escape HTML — textos vindos do config (cronograma, etc.)
+     ---------------------------------------------------------------------- */
+  function escapeHtml(text) {
+    if (text == null || text === "") return "";
+    const d = document.createElement("div");
+    d.textContent = String(text);
+    return d.innerHTML;
+  }
+
+  /* ----------------------------------------------------------------------
+     RENDER — Cronograma (textos em SITE_CONFIG.cronograma)
+     ---------------------------------------------------------------------- */
+  function renderCronograma() {
+    const mount = document.getElementById("cronogramaMount");
+    const data = cfg.cronograma;
+    if (!mount || !data) return;
+
+    const blocks = Array.isArray(data.blocks)
+      ? data.blocks
+          .map(
+            (b) => `
+        <li class="cronograma-step">
+          <div class="cronograma-step__rail" aria-hidden="true">
+            <span class="cronograma-step__dot"></span>
+          </div>
+          <div class="cronograma-step__content">
+            <article class="cronograma-card">
+              <span class="cronograma-card__tag">${escapeHtml(b.tag)}</span>
+              <h3 class="cronograma-card__title">${escapeHtml(b.title)}</h3>
+              <p class="cronograma-card__text">${escapeHtml(b.text)}</p>
+            </article>
+          </div>
+        </li>`
+          )
+          .join("")
+      : "";
+
+    const note = data.closingNote
+      ? `<p class="cronograma-note">${escapeHtml(data.closingNote)}</p>`
+      : "";
+
+    mount.innerHTML = `
+      <header class="section__head">
+        <span class="eyebrow">${escapeHtml(data.eyebrow)}</span>
+        <h2 class="section__title">${escapeHtml(data.title)}</h2>
+        <p class="section__lead">${escapeHtml(data.lead)}</p>
+      </header>
+      <ol class="cronograma-timeline" aria-label="Fluxo da experiência na ordem da noite">${blocks}</ol>
+      ${note}
+    `;
+
+    if (window.ScrollTrigger) window.ScrollTrigger.refresh();
+  }
+
+  /* ----------------------------------------------------------------------
+     RENDER — Ingressos (Seção 7)
      ---------------------------------------------------------------------- */
   function renderTickets() {
     const grid = document.getElementById("ticketsGrid");
@@ -139,8 +194,10 @@
     const imgs = cfg.images || {};
     const map = [
       { selector: ".hero__bg img", src: imgs.heroBackground },
+      { selector: ".gramado-bg img", src: imgs.gramadoParallax },
       { selector: ".mentor-card--gold .mentor-card__photo img", src: imgs.iranPhoto },
       { selector: ".mentor-card--cyan .mentor-card__photo img", src: imgs.gledisonPhoto },
+      { selector: ".mentor-card--warm .mentor-card__photo img", src: imgs.denisPhoto },
     ];
     map.forEach(({ selector, src }) => {
       if (!src) return;
@@ -182,6 +239,7 @@
     }
 
     initLenis();
+    renderCronograma();
     renderTickets();
     applyWhatsApp();
     applyFooterYear();
